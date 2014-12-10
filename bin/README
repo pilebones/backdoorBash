@@ -1,0 +1,2 @@
+Custom build for a specific CPU architecture (32/64bits)
+Compiled binaries must respect this specific naming convention : <binary_name>-<result of $(uname -m)>
