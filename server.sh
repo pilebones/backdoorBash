@@ -11,7 +11,6 @@ CONTINUE=true
 # Manage different POSIX system's signals
 on_exit ()
 {
-	# rm -f $FIFO_PATH pipe.lock
 	if [ $1 -eq 0 ]; then
 		log "$0 ending with success (status code: $1)"
 	else
@@ -32,7 +31,7 @@ trap on_interrupt INT TERM
 while $CONTINUE; do
 	log "Start server on port $PORT"
 	# TODO: Create socket on random port (port's range used in config)
-	$NC -lp $PORT -e ./manage-server-request.sh
+	$NC -l $HOST -p $PORT -e ./manage-server-request.sh
 	log "Server halted on port $PORT"
 done
 

@@ -8,14 +8,13 @@ CONTINUE=true
 . ./config.sh
 . ./lib.sh
 
-# Manage different system's signals
+# Manage different POSIX system's signals
 on_exit ()
 {
-	# rm -f $FIFO_PATH pipe.lock
 	if [ $1 -eq 0 ]; then
-		echo "$0 ending with success (status code: $1)" >&2
+		log "$0 ending with success (status code: $1)" >&2
 	else
-		echo "$0 ending with some error (status code: $1)"
+		log "$0 ending with some error (status code: $1)"
 	fi
 }
 
@@ -39,7 +38,7 @@ while $CONTINUE; do
 	then
 		CONTINUE=false
 	else
-		echo $INPUT | $OPENSSL enc -a -$CRYPT_METHOD -iv $IV -K $PRIVKEY | $NC $HOST $PORT 2> /dev/null
+		echo $INPUT | $OPENSSL enc -a -$CRYPT_METHOD -iv $IV -K $PRIVKEY | $NC $HOST $PORT > >(tee -a $LOG_CLIENT) 2> >(tee -a $LOG_CLIENT_ERROR >&2)
 	fi
 	echo ""
 done
