@@ -32,6 +32,8 @@ Notice :
 
 ## How it work ?
 
+The backdoor-client connection work localy and remontly (inside same private network with the same access-point), ie : see "$HOST" inside "config.sh".
+
 ### Simple test
 
 ```bash
@@ -46,6 +48,8 @@ vim config.sh
 
 ### Real condition
 
+_TODO_
+
 ## Limitations
 
 This backdoor is writing in bash programming language => It work only on Unix OS.
@@ -53,6 +57,4 @@ Currently, tested only on :
 - Archlinux -
 - Debian 7 
 - Ubuntu 14.10
-
-## References
 
