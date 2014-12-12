@@ -28,11 +28,15 @@ The main goals of this project is to implement an attack scenario as below :
 ## How it work ?
 
 ### Simple test
+
+```bash
+git clone git@github.com:pilebones/backdoorBash.git
+cd backdoorBash
 cp config.sh.sample config.sh 
 vim config.sh
 ./server.sh
 ./client.sh
-
+```
 .... And try to execute some shell command
 
 ### Real condition
