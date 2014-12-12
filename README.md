@@ -5,7 +5,7 @@ Unix remote-shell backdoor develop with Bash, Netcat, OpenSSL (data encryption w
 
 ## Introduction
 
-This project is associated to the others mine : 
+This project is associated to another mine : 
 - https://github.com/pilebones/etterfilterSamples
 - https://github.com/pilebones/hostingBackdoorInstaller
 
