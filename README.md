@@ -27,5 +27,23 @@ The main goals of this project is to implement an attack scenario as below :
 
 ## How it work ?
 
+### Simple test
+cp config.sh.sample config.sh 
+vim config.sh
+./server.sh
+./client.sh
+
+.... And try to execute some shell command
+
+### Real condition
+
+## Limitations
+
+This backdoor is writing in bash programming language => It work only on Unix OS.
+Currently, tested only on :
+- Archlinux -
+- Debian 7 
+- Ubuntu 14.10
+
 ## References
 
