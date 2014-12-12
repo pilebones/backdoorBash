@@ -18,7 +18,7 @@ The main goals of this project is to implement an attack scenario as below :
 - Detect and prevent this kind of attack with NIDS tool as Snort
 
 Notice :
-- The programming language was choose only for POC
+- The programming language was choose only for a Proof of Concept (POC)
 - The socket layer is assumed by a portable version of Netcat. I compiled Netcat for i686 and x86_64 computer architecture a put the binary inside this project.
 - The transmited data were encrypted with AES-128 (without using Cryptocat). The data are encrypted on the fly via OpenSSL.
 
