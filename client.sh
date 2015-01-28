@@ -33,6 +33,7 @@ trap on_interrupt INT TERM
 
 # TODO: Check random port to connect to backdoor (port's range used in config)
 while $CONTINUE; do
+	echo "Connect to backdoor server at $HOST:$PORT..."
 	echo "Notice: Type 'quit'|'q'|'exit' to close backdoor client"
 	echo "prompt > "
 	read INPUT

@@ -33,10 +33,10 @@ on_interrupt ()
 trap on_interrupt INT TERM
 
 while $CONTINUE; do
-	log "Start server on port $PORT"
+	log "Start server on port $HOST:$PORT"
 	# TODO: Create socket on random port (port's range used in config)
-	$NC -l $HOST -p $PORT -e ./manage-server-request.sh
-	log "Server halted on port $PORT"
+	$NC -nl $HOST -p $PORT -e ./manage-server-request.sh
+	log "Server halted on port $HOST:$PORT"
 done
 
 exit 0
