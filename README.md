@@ -14,7 +14,7 @@ The main goals of this project is to implement an attack scenario as below :
 - Attack Man In the middle with Ettercap (like ARP Spoofing)
 - Hosting a backdoor installer
 - Automate data alteration to inject our backdoor inside the computer of target by a browser
-- If the target run (naively) the script (ie: the backdoor installer) without reading code source the computer is infected and the attacker can obtain a remote access command
+- If the target run (naively) the script (ie: the backdoor installer) without reading source-code the computer is infected and the attacker will obtain a remote-access command
 - Detect and prevent this kind of attack with NIDS tool as Snort
 
 Notice :
@@ -76,4 +76,4 @@ Currently, tested only on :
 - Ubuntu 14.10
 
 Warning : 
-Some recent Routeur or Box or AP prevent this kind of MiTM attack. In this case, Ettercap could relay only one-way network-packets (From target to AP but not from AP to target). So Ettercap can alter the HTTP response to redirect to the backdoor's installer.
+Some recent router/box/AP/switch prevent this kind of MiTM attack. In this case, Ettercap could relay only one-way network-packets (From target to AP but not from AP to target). So Ettercap can alter the HTTP response to redirect to the backdoor's installer.
