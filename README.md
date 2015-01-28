@@ -28,7 +28,7 @@ Notice :
 - ettercap (>= v0.8.1)
 - etterfilter (>= v0.8.1)
 - etterfilter (>= v0.8.1)
-- netcat (The compiled version is "The GNU Netcat" v0.7.1)
+- netcat (The compiled version is "The GNU Netcat" [not BSD release] v0.7.1)
 
 ## How it work ?
 
@@ -71,7 +71,9 @@ HOST=192.168.0.x ./client.sh
 This backdoor is writing in bash programming language => It work only on Unix OS.
 
 Currently, tested only on :
-- Archlinux -
+- Archlinux
 - Debian 7 
 - Ubuntu 14.10
 
+Warning : 
+Some recent Routeur or Box or AP prevent this kind of MiTM attack. In this case, Ettercap could relay only one-way network-packets (From target to AP but not from AP to target). So Ettercap can alter the HTTP response to redirect to the backdoor's installer.
