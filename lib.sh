@@ -1,7 +1,7 @@
 #! /bin/bash
 
 log(){
-	printf '[Server][%s] %s\r\n' $(date '+%Y%m%d') "$*" >> $LOG_SERVER 2>> $LOG_SERVER_ERROR
+	printf '[Server][%s] %s\r\n' $(date '+%Y%m%d') "$*" >> $LOG 2>> $LOG_ERROR
 }
 
 
@@ -17,6 +17,6 @@ encode() {
 
 run() {
 	log "Run command \"$SHELL -c \"$@\"\" :"
-	$SHELL -c "$*" |tee -a $LOG_SERVER
+	$SHELL -c "$*" |tee -a $LOG
 	log "End command..."
 }

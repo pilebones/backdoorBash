@@ -4,6 +4,9 @@
 . ./config.sh
 . ./lib.sh
 
+# Override config
+LOG=${LOG_SERVER}
+LOG_ERROR=${LOG_SERVER_ERROR}
 
 read -r requestCrypted
 

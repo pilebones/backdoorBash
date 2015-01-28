@@ -8,6 +8,10 @@ CONTINUE=true
 . ./config.sh
 . ./lib.sh
 
+# Override config
+LOG=${LOG_SERVER}
+LOG_ERROR=${LOG_SERVER_ERROR}
+
 # Manage different POSIX system's signals
 on_exit ()
 {
