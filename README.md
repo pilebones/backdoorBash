@@ -3,7 +3,7 @@ backdoorBash
 
 Unix remote-shell backdoor develop with Bash, Netcat, OpenSSL (data encryption with AES-128bit)
 
-## Introduction
+## Introduction
 
 This project is associated to another mine : 
 - https://github.com/pilebones/etterfilterSamples
@@ -22,7 +22,7 @@ Notice :
 - The socket layer is assumed by a portable version of Netcat. I compiled Netcat for i686 and x86_64 computer architecture a put the binary inside this project.
 - The transmited data were encrypted with AES-128 (without using Cryptocat). The data are encrypted on the fly via OpenSSL.
 
-## Requirements
+## Requirements
 
 - openssl (tested with v1.0.1j)
 - ettercap (>= v0.8.1)
@@ -30,7 +30,7 @@ Notice :
 - etterfilter (>= v0.8.1)
 - netcat (The compiled version is "The GNU Netcat" [not BSD release] v0.7.1)
 
-## How it work ?
+## How it work ?
 
 The backdoor-client connection work localy and remontly (inside same private network with the same access-point), ie : see "$HOST" inside "config.sh".
 
@@ -66,7 +66,7 @@ IFACE=wlanX IP_AP=192.168.0.1 IP_TARGET=192.168.0.x ./run
 HOST=192.168.0.x ./client.sh
 ```
 
-## Limitations
+## Limitations
 
 This backdoor is writing in bash programming language => It work only on Unix OS.
 
